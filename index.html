@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="container">
+            <div class="profile-image">
+                <img src="/placeholder.svg?height=200&width=200" alt="Caio Eduardo de Lima Domingues" />
+            </div>
+            <h1 class="glitch" data-text="Caio Eduardo">Caio Eduardo</h1>
+            <h2>Desenvolvedor Front-end</h2>
+            <a href="#contact" class="cta-button">Entre em contato</a>
+        </div>
+    </section>
+    
+
+        <section id="about">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Sou Caio Eduardo de Lima Domingues, um desenvolvedor front-end apaixonado por criar experiências web incríveis e intuitivas. Com um olho para design e uma mente para código, estou sempre buscando novas maneiras de melhorar minhas habilidades e entregar projetos excepcionais.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Minhas Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" data-skill="HTML5">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item" data-skill="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item" data-skill="JavaScript">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item" data-skill="React">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item" data-skill="Git">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
+                        <h3>Projeto 1</h3>
+                        <p>Descrição breve do projeto 1.</p>
+                        <a href="#" class="project-link">Ver Projeto</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+                        <h3>Projeto 2</h3>
+                        <p>Descrição breve do projeto 2.</p>
+                        <a href="#" class="project-link">Ver Projeto</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
+                        <h3>Projeto 3</h3>
+                        <p>Descrição breve do projeto 3.</p>
+                        <a href="#" class="project-link">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" required>
+                        <label for="name">Seu Nome</label>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Seu E-mail</label>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" required></textarea>
+                        <label for="message">Sua Mensagem</label>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit">
+                        <span class="button-text">Enviar Mensagem</span>
+                        <span class="button-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Caio Eduardo de Lima Domingues. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/caio-eduardo-a10685204/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Potaoo" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/potaao_02/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
