@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #e74c3c;
-  --accent-color: #3498db;
-  --text-color: #333;
-  --bg-color: #ecf0f1;
+  --primary-color: #0b1a45;
+  --secondary-color: #007bff;
+  --accent-color: #00ffff;
+  --text-color: #ffffff;
+  --bg-color: #0b1a45;
 }
 
 * {
@@ -73,17 +73,18 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 #home {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://source.unsplash.com/random/1920x1080?technology") no-repeat center center / cover;
+  background: linear-gradient(rgba(11, 26, 69, 0.9), rgba(11, 26, 69, 0.9)),
+    url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Baixar%20Fundo%20de%20banner%20abstrato%20tecnologia%20gratuitamente.jpg-V5S9XKrgqSCY3V2rwfRwFCT7XkPi5e.jpeg")
+    no-repeat center center / cover;
   color: #fff;
 }
 
@@ -149,9 +150,11 @@ h2 {
 .skill-item {
   text-align: center;
   padding: 20px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -166,10 +169,12 @@ h2 {
 }
 
 .project-card {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -183,14 +188,14 @@ h2 {
   object-fit: cover;
 }
 
-.project-card h3,
-.project-card p {
-  padding: 0 20px;
-}
-
 .project-card h3 {
   margin-top: 20px;
-  color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.project-card p {
+  padding: 0 20px;
+  color: var(--text-color);
 }
 
 .project-link {
@@ -226,7 +231,9 @@ h2 {
   padding: 10px;
   border: none;
   border-bottom: 2px solid #ddd;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-color: var(--secondary-color);
   transition: border-color 0.3s ease;
 }
 
@@ -234,7 +241,7 @@ h2 {
   position: absolute;
   top: 10px;
   left: 10px;
-  color: #999;
+  color: var(--accent-color);
   transition: all 0.3s ease;
   pointer-events: none;
 }
@@ -339,7 +346,7 @@ h2 {
 }
 
 footer {
-  background-color: var(--primary-color);
+  background-color: #000;
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -360,7 +367,6 @@ footer {
   color: var(--secondary-color);
 }
 
-/* Glitch effect */
 .glitch {
   position: relative;
 }
@@ -418,8 +424,12 @@ footer {
   }
 }
 
-/* Responsive design */
+/* Responsive styles */
 @media (max-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -429,9 +439,80 @@ footer {
     margin: 10px 0;
   }
 
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
   .skills-grid,
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  #contact form {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+  }
+}
+
+/* Add a hamburger menu for mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle span {
+  height: 2px;
+  width: 25px;
+  background-color: #fff;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 20px 0;
+  }
+
+  nav ul.show {
+    display: flex;
   }
 }
 
