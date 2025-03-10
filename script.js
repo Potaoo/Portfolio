@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Smooth scrolling for navigation links
+  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault()
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Animate skill items on scroll
+  // Skill animation
   const skillItems = document.querySelectorAll(".skill-item")
   const animateSkills = () => {
     skillItems.forEach((item) => {
@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Check if an element is in the viewport
   const isElementInViewport = (el) => {
     const rect = el.getBoundingClientRect()
     return (
@@ -30,10 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     )
   }
 
-  // Animate skills on scroll
   window.addEventListener("scroll", animateSkills)
 
-  // Form validation and submission
+  // Contact form handling
   const contactForm = document.getElementById("contact-form")
   const formInputs = contactForm.querySelectorAll("input, textarea")
   const button = contactForm.querySelector("button")
@@ -119,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // Typing effect for the subtitle
+  // Typewriter effect for subtitle
   const subtitle = document.querySelector("#home h2")
   const text = subtitle.textContent
   subtitle.textContent = ""
@@ -132,5 +130,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   typeWriter()
+
+  // Mobile menu toggle functionality
+  const menuToggle = document.querySelector(".menu-toggle")
+  const navUl = document.querySelector("nav ul")
+
+  menuToggle.addEventListener("click", () => {
+    navUl.classList.toggle("show")
+  })
+
+  // Close mobile menu when a link is clicked
+  const navLinks = document.querySelectorAll("nav ul li a")
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navUl.classList.remove("show")
+    })
+  })
 })
 
